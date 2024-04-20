@@ -7,12 +7,10 @@ VALIDATE(){
 
 if [ $1 -ne 0 ]
 then
-  echo " installation is $2 fails...."
+  echo " $2 fails...."
   exit 1
-  echo " installation is $2 success...."
+  echo "  $2 success...."
   fi
-
-
 }
 
 
