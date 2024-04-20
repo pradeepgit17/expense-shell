@@ -41,18 +41,18 @@ VALIDATE $? "enabling mysql"
 systemctl start mysqld &>>$LOGFILE
 VALIDATE $? "starting mysql"
 
-#mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOGFILE
-#VALIDATE $? "Setting up root password"
+mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOGFILE
+VALIDATE $? "Setting up root password"
 
-mysql -h db.pradeep17.online -uroot -p${mysql_root_password} -e 'show databases;' &>>$LOGFILE
+#mysql -h db.pradeep17.online -uroot -p${mysql_root_password} -e 'show databases;' &>>$LOGFILE
 
-if [ $? -ne 0 ]
-then 
-     mysql_secure_installation --set-root-pass ${mysql_root_password} &>>$LOGFILE
-     VALIDATE $? "MySQL Root password Setup"
-else
-    echo -e "my root password is already setup $Y Skipping $N "
- fi
+#if [ $? -ne 0 ]
+#then 
+    # mysql_secure_installation --set-root-pass ${mysql_root_password} &>>$LOGFILE
+    # VALIDATE $? "MySQL Root password Setup"
+#else
+    #echo -e "my root password is already setup $Y Skipping $N "
+ #fi
 
 
 
