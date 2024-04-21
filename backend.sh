@@ -9,6 +9,6 @@ then
 else 
     echo  " your are super user"
 
-f1
+fi
 
 dnf install nodejs -y
