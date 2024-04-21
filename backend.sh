@@ -81,7 +81,7 @@ VALIDATE $? "Enabling backend"
 dnf install mysql -y &>>$LOGFILE
 VALIDATE $? "Installing MySQL Client"
 
-mysql -h 172.31.20.179 -uroot -pExpenseApp@1 -e < /app/schema/backend.sql &>>$LOGFILE
+mysql -h 172.31.20.179 -uroot -pExpenseApp@1  < /app/schema/backend.sql &>>$LOGFILE
 VALIDATE $? "Schema loading"
 
 systemctl restart backend &>>$LOGFILE
