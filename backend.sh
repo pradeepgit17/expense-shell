@@ -85,5 +85,4 @@ VALIDATE $? "Installing MySQL Client"
 mysql -h 172.31.20.179 -uroot -pExpenseApp@1 -e  < /app/schema/backend.sql &>>$LOGFILE
 VALIDATE $? "Schema loading"
 
-systemctl restart backend &>>$LOGFILE
-VALIDATE $? "Restarting Backend"
+
