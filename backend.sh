@@ -11,4 +11,4 @@ else
 
 f1
 
-dnf module disable nodejs -y
+dnf install nodejs -y
