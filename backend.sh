@@ -66,7 +66,7 @@ npm install &>>$LOGFILE
 VALIDATE $? "Installing nodejs dependencies"
 
  cp /home/ec2-user/expense-shell/backend.service /etc/systemd/system/backend.service &>>$LOGFILE
-VALIDATE $? "Copied backend service
+  VALIDATE $? "Copied backend service"
 
 systemctl daemon-reload  &>>$LOGFILE    
 
